@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="">
+    <title>Natty Tattoo Ethiopia </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero section overlay */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Custom animation for the logo */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-logo {
+            animation: pulse 3s infinite;
+        }
+        
+        /* Gallery hover effect */
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Custom form input */
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-bottom: 2px solid #111827;
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            background-color: white;
+            border-bottom-color: #be185d;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center">
+                        <div class="pulse-logo">
+                            <svg class="h-10 w-10 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <span class="ml-2 text-white font-bold text-xl">NATTY TATTOO ETHIOPIA</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-pink-600 transition duration-300">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">About</a>
+                        
+                        <a href="#gallery" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Gallery</a>
+                        <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Services</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-pink-600 transition duration-300">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">About</a>
+                
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Gallery</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Services</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-pink-600 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1602093740928-7e99d338f778?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tattoo Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <!-- Hero content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+                <span class="block">NATTY TATTOO ETHIOPIA</span>
+                <span class="block text-pink-500">Where Art Becomes Skin</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-xl text-gray-300 mb-10">
+                Professional tattoo artistry with a focus on hygiene, creativity, and exceptional customer experience.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    BOOK A CONSULTATION
+                </a>
+                <a href="#gallery" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold rounded-lg transition duration-300 transform hover:scale-105">
+                    VIEW OUR WORK
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">OUR STORY</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">Discover the passion behind our craft</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img src="Natty.jpg" alt="Studio Interior" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl font-bold">EC. 2006</h3>
+                            <p>10+ years of artistic excellence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Natty Tattoo Studio: Where Vision Meets Skin</h3>
+                    <p class="text-gray-600 mb-4">
+                        Founded in 2006 by master tattoo artist Natty , our studio has grown from a small passion project to one of the most respected tattoo establishments in the region. We believe in tattoos as a form of self-expression, storytelling, and art.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        እንኳን ወደ ናቲ ንቅሳት ስቱዲዮ በደህና መጡ፣ ቀለም ማንነትን የሚያሟላ እና እያንዳንዱ ንድፍ ታሪክን የሚናገር። በማደግ ላይ ባለው የፈጠራ ትዕይንት እምብርት ላይ የምንገኝ፣ ሃሳብዎን ወደ ጊዜ የማይሽረው የሰውነት ጥበብ ስራዎች ለመቀየር ተዘጋጅተን እየጠበቅናቹ ነው ።
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-gray-900">100% Sterile</h4>
+                                <p class="text-gray-600 text-sm">Hospital-grade cleanliness standards</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-gray-900">Custom Designs</h4>
+                                <p class="text-gray-600 text-sm">Tailored to your unique vision</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-gray-900">Award-Winning</h4>
+                                <p class="text-gray-600 text-sm">Recognized for artistic excellence</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-medium text-gray-900">Pain Management</h4>
+                                <p class="text-gray-600 text-sm">Techniques to maximize comfort</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">OUR WORK</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">A glimpse at our recent creations</p>
+            </div>
+            
+            
+            
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gallery-container">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="Religious">
+                    <img src="g1.jpg" alt="Portrait Tattoo" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">Jesus Christ Portrait </h3>
+                            <p class="text-sm">Realism Work by Natty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="realism">
+                    <img src="g2.jpg" alt="Watercolor Tattoo" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">Entrance to the gate of paradise</h3>
+                            <p class="text-sm">By Natty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="Religious">
+                    <img src="g3.jpeg" alt="Japanese Tattoo" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">St Mary</h3>
+                            <p class="text-sm">By Natty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="Religious">
+                    <img src="g4.jpg" alt="Tribal Tattoo" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">St Gabriel</h3>
+                            <p class="text-sm">By Natty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="realism">
+                    <img src="g5.jpeg" alt="Miniature Tattoo" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">Boxing Glove</h3>
+                            <p class="text-sm">By Natty</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item relative group overflow-hidden rounded-lg shadow-md" data-category="realism">
+                    <img src="g6.jpeg" alt="Animal Portrait" class="w-full h-80 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <h3 class="text-lg font-bold">Space Moon</h3>
+                            <p class="text-sm">By Natty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="https://www.instagram.com/natty_tattoo_ethiopia/" target="_blank" class="inline-flex items-center px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                    <i class="fab fa-instagram text-xl mr-2"></i>
+                    FOLLOW US FOR MORE WORK
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">OUR SERVICES</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-300">Comprehensive tattoo solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-pink-700 flex items-center justify-center">
+                        <svg class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Custom Tattoo Design</h3>
+                        <p class="text-gray-300 mb-4">
+                            Our tattoo artist Natty work with you to create a completely original design tailored to your vision, meaning, and body placement.
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Comprehensive consultation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Multiple design proofs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Professional guidance on placement</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-pink-700 flex items-center justify-center">
+                        <svg class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Tattoo Cover-ups</h3>
+                        <p class="text-gray-300 mb-4">
+                            Turn your old tattoo into something new that you'll love. Our artists specialize in transforming existing tattoos into stunning works of art.
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Free initial assessment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Creative cover-up solutions</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-pink-700 flex items-center justify-center">
+                        <svg class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Tattoo Touch-ups</h3>
+                        <p class="text-gray-300 mb-4">
+                            Existing tattoos that need a refresh? We'll help restore your ink to its original vibrancy with precision touch-up work.
+                        </p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Color restoration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Line sharpening</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="flex-shrink-0 h-5 w-5 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-2">Special aftercare instructions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-800 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-2">Pricing Information</h3>
+                        <p class="text-gray-300">Our pricing varies based on design complexity, size. Book a consultation for a custom quote.</p>
+                    </div>
+                    <a href="#contact" class="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                        BOOK A CONSULTATION
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">CLIENT TESTIMONIALS</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">What our clients say about us</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 flex items-center justify-center bg-pink-100 rounded-full">
+                            <svg class="h-6 w-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 012 2v2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9c0-1.1.9-2 2-2h3zm-1 2H5v10h14V9h-1v2c0 1.1-.9 2-2 2h-4a2 2 0 01-2-2V9zm6-2V5h-4v2h4z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Yodit Eshete</h4>
+                            <div class="flex">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Natty did an incredible job on my portrait tattoo. He took my vague description and turned it into exactly what I was imagining. The attention to detail is astonishing. It's been a year and the tattoo still looks fresh!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 flex items-center justify-center bg-pink-100 rounded-full">
+                            <svg class="h-6 w-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 012 2v2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9c0-1.1.9-2 2-2h3zm-1 2H5v10h14V9h-1v2c0 1.1-.9 2-2 2h-4a2 2 0 01-2-2V9zm6-2V5h-4v2h4z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Yosef Solomon</h4>
+                            <div class="flex">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2. 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "I was nervous about getting my first tattoo, but Natty made me feel completely comfortable. He explained every step and was incredibly patient. The result exceeded my expectations - people stop me all the time to ask about it!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="h-10 w-10 flex items-center justify-center bg-pink-100 rounded-full">
+                            <svg class="h-6 w-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 7V5c0-1.1.9-2 2-2h4a2 2 0 012 2v2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9c0-1.1.9-2 2-2h3zm-1 2H5v10h14V9h-1v2c极 0 1.1-.9 2-2h4a2 2 0 01-2-2V9zm6-2V5h-4v2h4z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Seyfu</h4>
+                            <div class="flex">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57极-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462极c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Natty transformed my old tribal tattoo into an amazing Religious sleeve. The cover-up is flawless - you'd never know there was anything underneath. The studio's hygiene standards are impeccable, which was very important to me."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">CONTACT US</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">Ready to start your tattoo journey? Get in touch!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        
+                        <div>
+                            <label for="artist" class="block text-sm font-medium text-gray-700 mb-1">Preferred Artist</label>
+                            <select id="artist" name="artist" class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500">
+                                <option value="any">Natty Tattoo Artist</option>
+                                
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell Us About Your Idea *</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 input-field rounded-lg focus:ring-2 focus:ring-pink-500"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full px-6 py-4 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+                                SEND MESSAGE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full">
+                        <div class="h-64 bg-gray-800 flex items-center justify-center">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d41287.32841592244!2d38.76567339056135!3d9.010486415914329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x164b8544610693fd%3A0x69442f99318021f3!2sAddis%20Ababa%202424!3m2!1d8.9957616!2d38.791116599999995!5e1!3m2!1sen!2set!4v1749222670128!5m2!1sen!2set" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6">STUDIO INFORMATION</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-600"> Bole Road</p>
+                                        <p class="text-gray-600">Addis Ababa, Ethiopia </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-600">+25192 072 1105</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 极 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-gray-600">nalex0926@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-medium text-gray-900">Hours:</p>
+                                        <p class="text-gray-600">Monday to Friday: 11AM - 8PM</p>
+                                        <p class="text-gray-600">Saturday: 10AM - 6PM</p>
+                                        <p class="text-gray-600">Sunday: Closed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://web.facebook.com/Nattytattooednamall/?_rdc=1&_rdr#" class="h-10 w-10 rounded-full bg-gray-200 hover:bg-pink-600 flex items-center justify-center text-gray-700 hover:text-white transition duration-300">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    
+                                    <a href="https://www.instagram.com/natty_tattoo_ethiopia/" class="h-10 w-10 rounded-full bg-gray-200 hover:bg-pink-600 flex items-center justify-center text-gray-700 hover:text-white transition duration-300">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                     <a href="https://www.tiktok.com/discover/natty-tattoo?lang=en" class="h-10 w-10 rounded-full bg-gray-200 hover:bg-black flex items-center justify-center text-gray-700 hover:text-white transition duration-300">
+    <i class="fab fa-tiktok"></i>
+</a>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="w-20 h-1 bg-pink-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">We've got answers to your questions</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <h3 class="text-lg font-medium text-gray-900">How do I prepare for my tattoo appointment?</h3>
+                            <svg class="h-5 w-5 text-pink-600 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-4 bg-white hidden">
+                            <p class="text-gray-600">
+                                Get plenty of sleep the night before, eat a good meal within 4 hours of your appointment, avoid alcohol 24 hours prior, wear comfortable clothing that allows easy access to the area being tattooed, and stay hydrated. If it's your first tattoo, avoid caffeine on the day for those who get jittery easily.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <h3 class="text-lg font-medium text-gray-900">How much does a tattoo cost?</h3>
+                            <svg class="h-5 w-5 text-pink-600 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-4 bg-white hidden">
+                            <p class="text-gray-600">
+                                Pricing depends on the size, complexity, placement on the body, and artist selected. Small tattoos start around Br 3,000 - Br 5,000, medium pieces range from Br 8,000 - Br 15,000, while large custom work or sleeves are priced by the session (Br 5,000 - Br 10,000 per hour). During your consultation, we'll provide a clear estimate after discussing your specific design.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <h3 class="text-lg font-medium text-gray-900">Is getting a tattoo painful?</h3>
+                            <svg class="h-5 w-5 text-pink-600 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-4 bg-white hidden">
+                            <p class="text-gray-600">
+                                Pain levels vary depending on your personal tolerance, tattoo placement, and duration. Most describe it as an intense scratching or vibration. Bony areas (ribs, hands, feet) tend to be more sensitive, while meatier areas (upper arm, thigh) are more comfortable. Our artists work carefully to minimize discomfort and can provide numbing options when appropriate.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <h3 class="text-lg font-medium text-gray-900">How do I care for my new tattoo?</h3>
+                            <svg class="h-5 w-5 text-pink-600 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-4 bg-white hidden">
+                            <p class="text-gray-600">
+                                Keep the initial bandage on for 2-4 hours. Wash gently with lukewarm water and mild fragrance-free soap, pat dry with a clean paper towel, and apply a thin layer of recommended ointment 2-3 times daily. Avoid soaking, swimming, direct sunlight, and gym sessions for 2 weeks. Wear loose clothing over the area. Full healing takes about 4-6 weeks. We provide detailed aftercare instructions specific to your tattoo.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px极6 py-4 text-left flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <h3 class="text-lg font-medium text-gray-900">How old do I need to be to get a tattoo?</h3>
+                            <svg class="h极-5 w-5 text-pink-600 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="faq-content px-6 py-4 bg-white hidden">
+                            <p class="text-gray-600">
+                                You must be at least 18 years old to get tattooed at our studio without exceptions. We strictly comply with all health regulations and require valid government-issued photo ID (driver's license, passport, or Aadhar card with photo) as proof of age before any tattoo service. We do not tattoo minors, even with parental consent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-pink-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">READY TO CREATE YOUR MASTERPIECE?</h2>
+                <p class="text-xl text-pink-100 max-w-3xl mx-auto mb-10">Book your consultation today and let's bring your vision to life on your skin.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-white hover:bg-gray-100 text-pink-600 font-bold rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                        BOOK NOW
+                    </a>
+                    <a href="tel:+251920721105" class="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-pink-600 text-white font-bold rounded-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        CALL US
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Natty TATTOO ETHIOPIA</h3>
+                    <p class="text-gray-400 mb-4">
+                        Professional tattoo studio dedicated to creating beautiful, meaningful body art with the highest standards of hygiene and artistic excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://web.facebook.com/Nattytattooednamall/?_rdc=1&_rdr#" class="text-gray-400 hover:text-pink-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/natty_tattoo_ethiopia/" class="text-gray-400 hover:text-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/discover/natty-tattoo?lang=en" class="h-10 w-10 rounded-full bg-gray-200 hover:bg-black flex items-center justify-center text-gray-700 hover:text-white transition duration-300">
+    <i class="fab fa-tiktok"></i>
+</a>
+                        
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">QUICK LINKS</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-pink-500">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-pink-500">About Us</a></li>
+                        
+                        <li><a href="#gallery" class="text-gray-400 hover:text-pink-500">Gallery</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pink-500">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-pink-500">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hours -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">STUDIO HOURS</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>11AM - 8PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>10AM - 6PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Need an appointment?</h4>
+                        <a href="#contact" class="text-pink-500 hover:text-pink-400 font-medium">Request Here</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Natty Tattoo ETHIOPIA. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://yosefsolomon.kokebkotera.com/" class="text-gray-400 hover:text-pink-500 text-sm">Developed by Yosef Solomon</a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-pink-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                this.classList.add('bg-pink-600', 'text-white');
+                
+                // Filter items
+                const filter = this.dataset.filter;
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ accordion functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('svg');
+                
+                // Toggle content
+                content.classList.toggle('hidden');
+                
+                // Toggle icon rotation
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open FAQs
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== this) {
+                        otherToggle.nextElementSibling.classList.add('hidden');
+                        otherToggle.querySelector('svg').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+                
+                // Here you would typically send the data to a server
+                console.log('Form submitted:', data);
+                
+                // Show a success message (in a real app, you'd wait for the server response)
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+
+        // Add animation when elements come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.gallery-item, .gallery-filter, .faq-toggle');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate-fadeIn');
+                }
+            });
+        };
+
+        // Check on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Scroll to top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollToTopBtn.className = 'fixed bottom-8 right-8 h-12 w-12 bg-pink-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50 hover:bg-pink-700';
+        document.body.appendChild(scrollToTopBtn);
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
